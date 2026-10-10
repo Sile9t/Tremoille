@@ -1,4 +1,54 @@
 body {
-    background-color: #000;
-    color: #fff;
+  background-color: #000;
+  color: #fff;
+}
+
+body header {
+  display: flex;
+  justify-content: space-between;
+}
+
+#initial {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  background: url("./src/img/Perfume.png") center/30% no-repeat;
+
+  .collection-quote {
+    font-weight: 100;
+    font-size: 12vw;
+    line-heiht: .5;
+    justify-self: center;
+    margin: 0 0 42vw 0;
+  }
+
+  .new-collection-wrapper {
+    display: flex;
+    justify-content: end;
+    align-items: end;
+    width: 100%;
+  }
+
+  .new-collection-link {
+    position: relative;
+    text-decoration: none;
+    color: inherit;
+    padding: .5rem;
+    transition: opacity .5s ease-in-out;
+    bottom: 20vw;
+    
+    &::before {
+      content: "[";
+      margin-right: .1rem;
+    }
+
+    &::after {
+      content: "]";
+      margin-left: .1rem;
+    }
+
+    &:hover {
+      opacity: .8;
+    }
+  }
 }
